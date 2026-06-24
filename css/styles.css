@@ -61,17 +61,20 @@ header.solid .menu-btn,header.open .menu-btn{color:var(--blue);}
 .hero-logo .lc{display:block;font-family:var(--fd);font-weight:700;font-size:clamp(22px,3.6vw,44px);letter-spacing:-0.01em;color:#fff;margin-top:8px;}
 .hero-logo .sl{color:var(--coral);}
 .hero .lead{color:var(--sky-soft);max-width:52ch;}
-.hero-hospitals{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px;max-width:680px;}
+.hero-row{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,4vw,60px);align-items:center;margin-top:36px;}
+.hero-row .lead{margin-top:0;font-size:clamp(20px,2.1vw,28px);line-height:1.5;max-width:30ch;}
+.hero-hospitals{display:flex;flex-direction:column;gap:14px;}
+.hero-hospitals .hh{aspect-ratio:auto;height:clamp(118px,15vh,150px);}
 .hh{position:relative;display:block;border-radius:14px;overflow:hidden;aspect-ratio:16/10;text-decoration:none;transition:transform .25s cubic-bezier(.22,1,.36,1);}
 .hh:hover{transform:translateY(-3px);}
 .hh img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.22,1,.36,1);}
 .hh:hover img{transform:scale(1.04);}
-.hh-bar{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;color:#fff;background:linear-gradient(to top,rgba(13,24,90,.9),rgba(13,24,90,0));}
-.hh-name{font-family:var(--fb);font-size:13.5px;font-weight:600;}
+.hh-bar{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:16px 16px 14px;background:linear-gradient(to top,#F2F1EC 0%,rgba(242,241,236,.94) 42%,rgba(242,241,236,0) 100%);}
+.hh-name{font-family:var(--fb);font-size:13.5px;font-weight:600;color:var(--blue);}
 .hh-more{font-family:var(--fb);font-size:13px;font-weight:600;color:var(--coral);display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
 .hh-more .arrow{transition:transform .25s cubic-bezier(.22,1,.36,1);}
 .hh:hover .hh-more .arrow{transform:translateX(4px);}
-@media(max-width:620px){.hero-hospitals{grid-template-columns:1fr;}}
+@media(max-width:820px){.hero-row{grid-template-columns:1fr;}}
 
 /* SPLIT */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,72px);align-items:center;}
