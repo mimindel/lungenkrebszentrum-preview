@@ -10,34 +10,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;500;600;700;800&family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 <style>
-  /* Hero-Variante A: cinematic merge */
+  /* Hero — cinematic merge */
   .hero{position:relative;isolation:isolate;background:#0F1E63;color:#fff;min-height:100vh;display:flex;flex-direction:row;padding:0;overflow:hidden;}
-  .hero-half{position:absolute;top:0;bottom:0;width:50%;z-index:1;background-size:cover;background-position:center;text-decoration:none;}
+  .hero-half{position:absolute;top:0;bottom:0;width:50%;z-index:1;background-size:cover;background-position:center;}
   .hero-half.hl{left:0;background-image:url('assets/hero_KSB.webp');}
   .hero-half.hr{right:0;background-image:url('assets/hero_stadtspital.jpg');}
   .hero-tint{position:absolute;inset:0;z-index:2;pointer-events:none;background:#1b2f8a;mix-blend-mode:color;}
   .hero-ovl{position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(180deg,rgba(13,24,80,.5) 0%,rgba(9,17,72,.8) 100%),radial-gradient(90% 80% at 50% 42%,rgba(9,17,72,.2),rgba(9,17,72,.62) 80%);}
   .hero-seam{position:absolute;left:50%;top:0;bottom:0;width:2px;z-index:4;transform:translateX(-50%);pointer-events:none;background:linear-gradient(rgba(251,96,72,0),rgba(251,96,72,.9) 28%,rgba(251,96,72,.9) 72%,rgba(251,96,72,0));animation:seamBreath 4s ease-in-out infinite;}
   .hero-inner{position:absolute;z-index:5;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;padding:0 var(--mx);pointer-events:none;}
-  .hero-logo{margin-top:14px;}
-  .hero-logo .ll{font-size:clamp(38px,7vw,88px);line-height:.9;}
-  .hero-logo .lc{font-size:clamp(22px,3.4vw,42px);}
-  .hero-tag{margin:18px auto 0;max-width:52ch;color:var(--sky-soft);font-size:clamp(15px,1.4vw,18px);}
-  .hh-label{position:absolute;bottom:24px;z-index:6;display:flex;flex-direction:column;gap:3px;font-family:var(--fb);color:#fff;text-shadow:0 1px 8px rgba(9,17,72,.6);}
+  .hero-logo .ll{font-size:clamp(34px,6vw,74px);line-height:.92;}
+  .hero-logo .lc{font-size:clamp(20px,3vw,38px);}
+  .hero-tag{margin:20px auto 0;max-width:55ch;color:var(--sky-soft);font-size:clamp(17px,1.7vw,22px);line-height:1.5;}
+  .hero-more{display:inline-flex;align-items:center;gap:10px;margin-top:26px;color:#fff;font-family:var(--fb);font-weight:600;font-size:15px;text-decoration:none;pointer-events:auto;}
+  .hero-more .dot{width:12px;height:12px;border-radius:50%;background:var(--coral);transform-origin:center;animation:coralBreath 3.1s ease-in-out infinite;}
+  .hero-more .arrow{transition:transform .25s cubic-bezier(.22,1,.36,1);}
+  .hero-more:hover .arrow{transform:translateX(4px);}
+  .hh-label{position:absolute;bottom:26px;z-index:6;display:inline-flex;align-items:center;gap:9px;font-family:var(--fb);font-size:15px;font-weight:600;color:#fff;text-decoration:none;background:rgba(13,24,80,.5);padding:10px 16px;border-radius:11px;transition:background .2s;}
+  .hh-label:hover{background:rgba(13,24,80,.74);}
   .hh-label.l{left:var(--mx);}
-  .hh-label.r{right:var(--mx);text-align:right;align-items:flex-end;}
-  .hh-name{font-size:14px;font-weight:600;}
-  .hh-more{font-size:12.5px;font-weight:600;color:var(--coral);display:inline-flex;align-items:center;gap:6px;}
-  .hh-more .arrow{transition:transform .25s cubic-bezier(.22,1,.36,1);}
-  .hero-half:hover .hh-more .arrow{transform:translateX(4px);}
+  .hh-label.r{right:var(--mx);}
+  .hh-label .arrow{color:var(--coral);transition:transform .25s cubic-bezier(.22,1,.36,1);}
+  .hh-label:hover .arrow{transform:translateX(4px);}
   @media(prefers-reduced-motion:reduce){.hero-seam{animation:none;}}
   @media(max-width:760px){
     .hero-half{width:100%;height:50%;}
     .hero-half.hl{top:0;bottom:auto;}
     .hero-half.hr{bottom:0;top:auto;}
     .hero-seam{left:0;right:0;top:50%;bottom:auto;width:100%;height:2px;transform:translateY(-50%);background:linear-gradient(90deg,rgba(251,96,72,0),rgba(251,96,72,.9) 28%,rgba(251,96,72,.9) 72%,rgba(251,96,72,0));}
-    .hh-label.l{top:20px;bottom:auto;}
-    .hh-label.r{right:auto;left:var(--mx);text-align:left;align-items:flex-start;bottom:20px;}
+    .hh-label.l{top:18px;bottom:auto;}
+    .hh-label.r{right:auto;left:var(--mx);bottom:18px;}
   }
 </style>
 </head>
@@ -60,22 +62,20 @@
 
 <a id="top"></a>
 <section class="hero" aria-label="Startseite">
-  <a class="hero-half hl" href="#expertise" aria-label="Kantonsspital Baden, mehr erfahren">
-    <span class="hh-label l"><span class="hh-name">Kantonsspital Baden</span><span class="hh-more">Mehr erfahren <span class="arrow">→</span></span></span>
-  </a>
-  <a class="hero-half hr" href="#expertise" aria-label="Stadtspital Zürich Triemli, mehr erfahren">
-    <span class="hh-label r"><span class="hh-name">Stadtspital Zürich Triemli</span><span class="hh-more">Mehr erfahren <span class="arrow">→</span></span></span>
-  </a>
+  <div class="hero-half hl" aria-hidden="true"></div>
+  <div class="hero-half hr" aria-hidden="true"></div>
   <div class="hero-tint" aria-hidden="true"></div>
   <div class="hero-ovl" aria-hidden="true"></div>
   <span class="hero-seam" aria-hidden="true"></span>
+  <a class="hh-label l" href="https://www.kantonsspitalbaden.ch" target="_blank" rel="noopener">Kantonsspital Baden <span class="arrow" aria-hidden="true">→</span></a>
+  <a class="hh-label r" href="https://www.stadt-zuerich.ch/stadtspital" target="_blank" rel="noopener">Stadtspital Zürich Triemli <span class="arrow" aria-hidden="true">→</span></a>
   <div class="hero-inner">
-    <span class="hero-eyebrow">Gemeinsames Lungenkrebszentrum</span>
     <div class="hero-logo">
       <span class="ll">Lungenkrebszentrum</span>
       <span class="lc">Baden<span class="sl">—</span>Zürich</span>
     </div>
-    <p class="hero-tag">Das Lungenkrebszentrum Baden—Zürich bietet mit kantonsübergreifenden Kompetenzen individuelle, umfassende und wohnortnahe Behandlung und Begleitung von Patientinnen und Patienten.</p>
+    <p class="hero-tag">Das Lungenkrebszentrum Baden—Zürich bietet mit kantonsübergreifenden Kompetenzen individuelle, umfassende und wohnortnahe Behandlung und Begleitung von Patientinnen und&nbsp;Patienten.</p>
+    <a class="hero-more" href="#expertise"><span class="dot" aria-hidden="true"></span>Mehr erfahren <span class="arrow" aria-hidden="true">→</span></a>
   </div>
 </section>
 
