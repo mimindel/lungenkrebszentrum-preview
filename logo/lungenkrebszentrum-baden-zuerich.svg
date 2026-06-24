@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 116" width="580" height="116" role="img" aria-label="Lungenkrebszentrum Baden—Zürich">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mona+Sans:wght@600;700&amp;display=swap');
+    .l1{font-family:'Mona Sans',sans-serif;font-weight:700;font-size:52px;letter-spacing:-1px;fill:#152A86;}
+    .l2{font-family:'Mona Sans',sans-serif;font-weight:600;font-size:28px;letter-spacing:.4px;fill:#152A86;}
+    .sl{fill:#FB6048;}
+  </style>
+  <text x="2" y="50" class="l1">Lungenkrebszentrum</text>
+  <text x="3" y="90" class="l2">Baden<tspan class="sl">—</tspan>Zürich</text>
+</svg>
