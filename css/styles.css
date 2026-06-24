@@ -109,7 +109,9 @@ footer{background:var(--blue-deep);color:var(--sky);padding:56px var(--mx) 40px;
 .foot-logos{display:flex;gap:12px;flex-wrap:wrap;}
 .foot-logos .hp{height:64px;background:#fff;border-radius:12px;padding:12px 18px;display:flex;align-items:center;text-decoration:none;}
 .foot-logos .hp img{max-height:40px;width:auto;}
-.foot-meta{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);font-size:13px;color:var(--sky);}
+.foot-meta{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);font-size:13px;color:var(--sky);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.foot-legal{color:var(--sky);text-decoration:none;font-weight:600;}
+.foot-legal:hover{color:#fff;}
 
 /* MOTION */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1);}
