@@ -109,7 +109,13 @@ footer{background:var(--blue-deep);color:var(--sky);padding:56px var(--mx) 40px;
 .foot-logos{display:flex;gap:12px;flex-wrap:wrap;}
 .foot-logos .hp{height:64px;background:#fff;border-radius:12px;padding:12px 18px;display:flex;align-items:center;text-decoration:none;}
 .foot-logos .hp img{max-height:40px;width:auto;}
-.foot-meta{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);font-size:13px;color:var(--sky);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.foot-contact{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:34px;padding-top:28px;border-top:1px solid rgba(255,255,255,.16);}
+.fc-col h4{font-family:var(--fd);font-weight:700;font-size:15px;color:#fff;margin-bottom:8px;}
+.fc-col p{font-size:13.5px;color:var(--sky);line-height:1.75;}
+.fc-col a{color:var(--sky);text-decoration:none;}
+.fc-col a:hover{color:#fff;text-decoration:underline;text-decoration-color:var(--coral);text-underline-offset:3px;}
+@media(max-width:600px){.foot-contact{grid-template-columns:1fr;gap:24px;}}
+.foot-meta{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);font-size:13px;color:var(--sky);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
 .foot-legal{color:var(--sky);text-decoration:none;font-weight:600;}
 .foot-legal:hover{color:#fff;}
 
