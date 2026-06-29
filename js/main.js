@@ -25,6 +25,9 @@
     });
   });
 
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
   var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   var reveals = document.querySelectorAll('.reveal');
   if (!reduce && 'IntersectionObserver' in window) {
