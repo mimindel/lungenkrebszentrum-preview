@@ -102,20 +102,22 @@ header.solid .menu-btn,header.open .menu-btn{color:var(--blue);}
 
 /* FOOTER */
 footer{background:var(--blue-deep);color:var(--sky);padding:56px var(--mx) 40px;}
-.foot-grid{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;}
+.foot-main{display:grid;grid-template-columns:1fr auto;gap:clamp(30px,5vw,60px);align-items:start;}
 .foot-brand .bn{font-family:var(--fd);font-weight:700;font-size:20px;color:#fff;}
 .foot-brand .bc{font-family:var(--fd);font-weight:600;font-size:13px;color:var(--sky);letter-spacing:.5px;}
 .foot-brand .sl{color:var(--coral);}
-.foot-logos{display:flex;gap:12px;flex-wrap:wrap;}
-.foot-logos .hp{height:64px;background:#fff;border-radius:12px;padding:12px 18px;display:flex;align-items:center;text-decoration:none;}
-.foot-logos .hp img{max-height:40px;width:auto;}
-.foot-contact{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:34px;padding-top:28px;border-top:1px solid rgba(255,255,255,.16);}
+.foot-brand-contact{font-size:13.5px;color:var(--sky);line-height:1.75;margin-top:16px;max-width:42ch;}
+.foot-brand-contact a{color:var(--sky);text-decoration:none;}
+.foot-brand-contact a:hover{color:#fff;text-decoration:underline;text-decoration-color:var(--coral);text-underline-offset:3px;}
 .fc-col h4{font-family:var(--fd);font-weight:700;font-size:15px;color:#fff;margin-bottom:8px;}
 .fc-col p{font-size:13.5px;color:var(--sky);line-height:1.75;}
 .fc-col a{color:var(--sky);text-decoration:none;}
 .fc-col a:hover{color:#fff;text-decoration:underline;text-decoration-color:var(--coral);text-underline-offset:3px;}
-@media(max-width:600px){.foot-contact{grid-template-columns:1fr;gap:24px;}}
-.foot-meta{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);font-size:13px;color:var(--sky);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.foot-logos{display:flex;flex-direction:column;gap:12px;align-items:flex-start;}
+.foot-logos .hp{height:60px;background:#fff;border-radius:12px;padding:12px 18px;display:flex;align-items:center;text-decoration:none;}
+.foot-logos .hp img{max-height:34px;width:auto;}
+@media(max-width:760px){.foot-main{grid-template-columns:1fr;gap:30px;}}
+.foot-meta{margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);font-size:13px;color:var(--sky);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
 .foot-legal{color:var(--sky);text-decoration:none;font-weight:600;}
 .foot-legal:hover{color:#fff;}
 
