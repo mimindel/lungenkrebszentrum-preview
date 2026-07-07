@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lungenkrebszentrum-baden-zuerich.ch/sitemap.xml
